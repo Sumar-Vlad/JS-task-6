@@ -2,14 +2,14 @@
 
 //1. Напишіть функцію addThemAll
 
-function addThemAll() {
-    let res = 0;
+function addThemAll(a, b, ...args) {
+    let sum = a + b;
 
-    for (let i = 0; i < arguments.length; i++) {
-        res += arguments[i];
+    for (let arg of args) {
+        sum += arg;
     }
 
-    return res;
+    return sum;
 }
 
 console.log(addThemAll(2,4));
